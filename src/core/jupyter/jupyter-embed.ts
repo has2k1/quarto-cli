@@ -287,7 +287,7 @@ export async function replaceNotebookPlaceholders(
         : {};
 
       // Compute appropriate includes based upon the note
-      // dependendencies
+      // dependencies
       const notebookIncludes = () => {
         if (safeExistsSync(nbAbsPath)) {
           const notebook = jupyterFromNotebookOrQmd(
@@ -461,7 +461,7 @@ export async function notebookMarkdown(
     });
     return notebookMarkdown(nbAbsPath, theCells, notebookInfo.title);
   } else {
-    // Return all the cell outputs as there is no addtional
+    // Return all the cell outputs as there is no additional
     // specification of cells
     const notebookMd = notebookMarkdown(
       nbAbsPath,

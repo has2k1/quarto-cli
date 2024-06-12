@@ -1049,7 +1049,7 @@ function bootstrapHtmlFinalizer(format: Format, flags: PandocFlags) {
         if (!hasRightContent && !hasMarginContent && !hasToc) {
           doc.body.classList.add("fullcontent");
         } else {
-          // Use the deafult layout, don't add any classes
+          // Use the default layout, don't add any classes
         }
       }
     } else {
@@ -1146,7 +1146,7 @@ function processColumnElements(
   const columnLayouts = getColumnLayoutElements(doc);
 
   // If there are any of these elements, we need to be sure that their
-  // parents have acess to the grid system, so make the parent full screen width
+  // parents have access to the grid system, so make the parent full screen width
   // and apply the grid system to it (now the child 'column-' element can be positioned
   // anywhere in the grid system)
   if (columnLayouts && columnLayouts.length > 0) {
@@ -1532,7 +1532,7 @@ const processFigureOutputs = (doc: Document) => {
 const processMarginElsInTabsets = (doc: Document) => {
   // Move margin elements inside tabsets into a separate container that appears
   // before the tabset- this will hold the margin content
-  // quarto.js will detect tab changed events and propery show and hide elements
+  // quarto.js will detect tab changed events and properly show and hide elements
   // by marking them with a collapse class.
 
   const tabSetNodes = doc.querySelectorAll("div.panel-tabset");

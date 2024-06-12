@@ -149,7 +149,7 @@ export function revealjsFormat() {
             format.metadata[kPdfMaxPagesPerSlide];
         }
 
-        // get theme info (including text highlighing mode)
+        // get theme info (including text highlighting mode)
         const theme = await revealTheme(format, input, libDir, services.temp);
 
         const revealPluginData = await revealPluginExtras(
@@ -420,7 +420,7 @@ function revealHtmlPostprocessor(
           "slideNumber: '$1'",
         );
 
-        // quote width and heigh if in %
+        // quote width and height if in %
         scriptEl.innerText = scriptEl.innerText.replace(
           /width: (\d+(\.\d+)?%)/,
           "width: '$1'",
@@ -545,7 +545,7 @@ function revealHtmlPostprocessor(
                 "data-id",
                 "quarto-animate-code",
               );
-              // markup with highlightjs classes so that are sucessfully targeted by
+              // markup with highlightjs classes so that are successfully targeted by
               // autoanimate.js
               codeEl.classList.add("hljs");
               codeEl.childNodes.forEach((spanNode) => {
@@ -590,7 +590,7 @@ function revealHtmlPostprocessor(
     }
 
     // inject css to hide assistive mml in speaker notes (have to do it for each aside b/c the asides are
-    // slurped into speaker mode one at a time using innerHTML) note that we can remvoe this hack when we begin
+    // slurped into speaker mode one at a time using innerHTML) note that we can remove this hack when we begin
     // defaulting to MathJax 3 (after Pandoc updates their template to support Reveal 4.2 / MathJax 3)
     // see discussion of underlying issue here: https://github.com/hakimel/reveal.js/issues/1726
     // hack here: https://stackoverflow.com/questions/35534385/mathjax-config-for-web-mobile-and-assistive

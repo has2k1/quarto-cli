@@ -23,7 +23,7 @@ export interface PlatformConfiguration {
   arch: "x86_64" | "aarch64";
 }
 
-// Directories avaialable for step
+// Directories available for step
 export interface DirectoryInfo {
   root: string;
   src: string;
@@ -43,7 +43,7 @@ export interface DirectoryInfo {
 export const kValidOS = ["windows", "linux", "darwin"];
 export const kValidArch = ["x86_64", "aarch64"];
 
-// Read the configuration fromt the environment
+// Read the configuration from the environment
 export function readConfiguration(
   version?: string,
   os?: "windows" | "linux" | "darwin",

@@ -297,7 +297,7 @@ export function documentCSL(
   };
   [
     "title-short",
-    "annote",
+    "annotate",
     "archive",
     "archive-place",
     "authority",

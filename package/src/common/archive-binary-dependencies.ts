@@ -145,7 +145,7 @@ export async function archiveBinaryDependency(
             "public-read",
           ]);
           
-          info(`(Reponse): ${result}`);
+          info(`(Response): ${result}`);
 
         } else {
           info(`${dependencyAwsPath} already archived.`);

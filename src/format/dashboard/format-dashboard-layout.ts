@@ -106,7 +106,7 @@ export function processRows(doc: Document) {
       rowEl.classList.add(kBsLibGridClass);
       rowEl.classList.remove(kRowsClass);
 
-      // Compute the layouts for ths rows in this rowEl
+      // Compute the layouts for the rows in this rowEl
       const rowLayouts = computeRowLayouts(rowEl);
 
       // Compute the percent conversion factor

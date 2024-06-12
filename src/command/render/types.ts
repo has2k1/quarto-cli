@@ -196,7 +196,7 @@ export interface PandocOptions {
   // mediabag directory
   mediabagDir: string;
 
-  // lib dir for converstion
+  // lib dir for conversion
   libDir: string;
 
   // target format
@@ -214,7 +214,7 @@ export interface PandocOptions {
   // optional execution engine
   executionEngine?: string;
 
-  // optoinal project context
+  // optional project context
   project?: ProjectContext;
 
   // quiet quarto pandoc informational output

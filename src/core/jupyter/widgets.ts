@@ -26,7 +26,7 @@ export function extractJupyterWidgetDependencies(
   nb: JupyterNotebook,
 ): JupyterWidgetDependencies {
   // a 'javascript' widget doesn't use the jupyter widgets protocol, but rather just injects
-  // text/html or application/javascript directly. futhermore these 'widgets' often assume
+  // text/html or application/javascript directly. furthermore these 'widgets' often assume
   // that require.js and jquery are available. for example, see:
   //   - https://github.com/mwouts/itables
   //   - https://plotly.com/python/

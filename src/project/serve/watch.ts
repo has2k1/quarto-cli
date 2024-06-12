@@ -98,7 +98,7 @@ export function watchProject(
       return false;
     } else {
       // check project resources and resources derived from
-      // indvidual files
+      // individual files
       return project.files.resources?.includes(path) ||
         resourceFiles.includes(path);
     }

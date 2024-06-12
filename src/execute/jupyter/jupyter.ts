@@ -238,7 +238,7 @@ export const jupyterEngine: ExecutionEngine = {
     format: Format,
   ) => {
     // if this is shiny server and the user hasn't set keep-hidden then
-    // set it as well as the attibutes required to remove the hidden blocks
+    // set it as well as the attributes required to remove the hidden blocks
     if (
       isServerShinyPython(format, kJupyterEngine) &&
       format.render[kKeepHidden] !== true
@@ -356,7 +356,7 @@ export const jupyterEngine: ExecutionEngine = {
 
     const nb = jupyterFromJSON(nbContents);
 
-    // cells tagged 'shinylive' should be emmited as markdown
+    // cells tagged 'shinylive' should be emitted as markdown
     fixupShinyliveCodeCells(nb);
 
     const assets = jupyterAssets(
@@ -371,10 +371,10 @@ export const jupyterEngine: ExecutionEngine = {
       (isHtmlDashboardOutput(options.format.identifier[kBaseFormat]) &&
         !isQmdFile(options.target.source));
 
-    // NOTE: for perforance reasons the 'nb' is mutated in place
+    // NOTE: for performance reasons the 'nb' is mutated in place
     // by jupyterToMarkdown (we don't want to make a copy of a
     // potentially very large notebook) so should not be relied
-    // on subseuqent to this call
+    // on subsequent to this call
     const result = await jupyterToMarkdown(
       nb,
       {

@@ -108,7 +108,7 @@ export async function revealPluginExtras(
 
   const pluginsDestDir = join(revealDestDir, "plugin");
 
-  // accumlate content to inject
+  // accumulate content to inject
   const register: string[] = [];
   const scripts: RevealPluginScript[] = [];
   const stylesheets: string[] = [];

@@ -14,7 +14,7 @@ import {
 export function processNavButtons(doc: Document, dashboardMeta: DashboardMeta) {
   const buttons = dashboardMeta[kNavButtons];
 
-  // Don't bother if there are no butons
+  // Don't bother if there are no buttons
   if (buttons === undefined || buttons.length === 0) {
     return;
   }

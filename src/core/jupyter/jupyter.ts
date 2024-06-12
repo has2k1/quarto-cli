@@ -762,7 +762,7 @@ export async function jupyterToMarkdown(
       ? cell.metadata[kCellSlideshow]?.[kCellSlideshowSlideType]
       : undefined;
     if (slideType) {
-      // write any implied delimeter (or skip entirely)
+      // write any implied delimiter (or skip entirely)
       if (slideType === "skip") {
         continue;
       } else if (slideType == "slide" || slideType === "subslide") {
@@ -1286,7 +1286,7 @@ async function mdFromCodeCell(
     return [];
   }
 
-  // ouptut: asis should just include raw markup w/ no enclosures
+  // output: asis should just include raw markup w/ no enclosures
   const asis =
     // specified as an explicit option for this cell
     cell.options[kOutput] === "asis" ||
@@ -1479,7 +1479,7 @@ async function mdFromCodeCell(
     md.push(ticks + "\n");
   }
 
-  // write output if approproate (output: asis gets special handling)
+  // write output if appropriate (output: asis gets special handling)
   if (includeOutput(cell, options)) {
     // compute label prefix for output (in case we need it for files, etc.)
     const labelName = label

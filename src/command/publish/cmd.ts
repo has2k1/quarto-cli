@@ -71,7 +71,7 @@ export const publishCommand =
     )
     .option(
       "--token <token:string>",
-      "Access token for publising provider",
+      "Access token for publishing provider",
     )
     .option(
       "--no-render",

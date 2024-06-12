@@ -39,8 +39,8 @@ export async function updateHtmlDependencies(config: Configuration) {
     throw new Error("HTMLTOOLS is not defined");
   }
 
-  info(`Boostrap: ${bsCommit}`);
-  info(`Boostrap Icon: ${bsIconVersion}`);
+  info(`Bootstrap: ${bsCommit}`);
+  info(`Bootstrap Icon: ${bsIconVersion}`);
   info(`Html Tools: ${htmlToolsVersion}`);
 
   // the bootstrap and dist/themes dir
@@ -60,7 +60,7 @@ export async function updateHtmlDependencies(config: Configuration) {
   const htmlToolsDir = join(formatDir, "htmltools");
   const bslibDir = join(formatDir, "bslib");
 
-  // For applying git patch to what we retreive
+  // For applying git patch to what we retrieve
   const patchesDir = join(config.directoryInfo.pkg, "src", "common", "patches");
 
   function resolvePatches(patches: string[]) {
@@ -537,7 +537,7 @@ export async function updateHtmlDependencies(config: Configuration) {
   )
 
   // Update Bootstrap icons
-  await updateBoostrapIcons(bsIconVersion, workingSubDir("bsicons"), bsDistDir);
+  await updateBootstrapIcons(bsIconVersion, workingSubDir("bsicons"), bsDistDir);
 
   // Update Pandoc themes
   await updatePandocHighlighting(config);
@@ -615,7 +615,7 @@ async function updateDatatables(
   config: Configuration,
   working: string
 ) {
-  // css: 
+  // css:
   // script: https://cdn.datatables.net/v/bs5/jszip-3.10.1/dt-1.13.8/b-2.4.2/b-html5-2.4.2/b-print-2.4.2/kt-2.11.0/r-2.5.0/datatables.min.js
 
   // pdfmake
@@ -633,7 +633,7 @@ async function updateDatatables(
     "dt"
   );
   await ensureDir(targetDir);
-  
+
   for (const file of dtFiles) {
     const url = `https://cdn.datatables.net/v/${datatablesConfig}/${file}`;
     const tempPath = join(working, file);
@@ -650,7 +650,7 @@ async function updateDatatables(
     await download(url, tempPath);
     await Deno.copyFile(tempPath, join(targetDir, file));
   }
-  
+
   info("Done\n");
 }
 
@@ -747,7 +747,7 @@ async function updateBootstrapFromBslib(
             // Clean the source path
             cleanSourceMap(toPath);
           }
-        }        
+        }
       }
 
       // Copy the scss files
@@ -757,7 +757,7 @@ async function updateBootstrapFromBslib(
       info(`Copying ${from} to ${to}`);
       copySync(from, to);
 
-      // Fix up the Boostrap rules files
+      // Fix up the Bootstrap rules files
       info(
         "Rewriting bootstrap.scss to exclude functions, mixins, and variables."
       );
@@ -815,7 +815,7 @@ async function updateBootstrapFromBslib(
         line = line.replaceAll(
           /RGBA?\(var\(--#\{\$prefix\}emphasis-color-rgb,(.*?)\).*?\)/gm,
           "$body-emphasis-color"
-        );        
+        );
         line = line.replaceAll(
           "var(--#{$prefix}secondary-color)",
           "$body-secondary-color"
@@ -841,7 +841,7 @@ async function updateBootstrapFromBslib(
           "$body-emphasis-color"
         );
         line = line.replaceAll(
-          "$emphasis-color-rgb", 
+          "$emphasis-color-rgb",
           "$body-emphasis-color"
         );
 
@@ -879,7 +879,7 @@ async function updateBootstrapFromBslib(
       const componentDistTo = join(bsLibDir, "components", "dist");
       info(`Copying ${componentDistFrom} to ${componentDistTo}`);
       ensureDirSync(componentDistTo);
-      copySync(componentDistFrom, componentDistTo, {overwrite: true});      
+      copySync(componentDistFrom, componentDistTo, {overwrite: true});
       // Clean map references
       for (const entry of walkSync(componentDistTo)) {
         if (entry.isFile) {
@@ -944,7 +944,7 @@ async function updateBootstrapFromBslib(
   );
 }
 
-async function updateBoostrapIcons(
+async function updateBootstrapIcons(
   version: string,
   working: string,
   distDir: string
@@ -1217,7 +1217,7 @@ const themePatches: Record<string, ThemePatch[]> = {
     {
       from: ".navbar {\n  @include shadow();",
       to: ".navbar {\n  @include shadow();\n  border-color: shade-color($navbar-bg, 10%);",
-    }, 
+    },
     {
       from: "$nav-link-color:                    var(--#{$prefix}link-color) !default;",
       to: "$nav-link-color:                    $primary !default;"

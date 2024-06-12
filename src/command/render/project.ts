@@ -299,7 +299,7 @@ export async function renderProject(
       (projectRenderConfig.options.flags?.clean == true) &&
         (projType.cleanOutputDir === true))
   ) {
-    // ouptut dir
+    // output dir
     const realProjectDir = normalizePath(context.dir);
     if (existsSync(projOutputDir)) {
       const realOutputDir = normalizePath(projOutputDir);
@@ -391,7 +391,7 @@ export async function renderProject(
   // set executeDaemon to 0 for renders of the entire project
   // or a list of more than 3 files (don't want to leave dozens of
   // kernels in memory). we use 3 rather than 1 because w/ blogs
-  // and listings there may be addtional files added to the render list
+  // and listings there may be additional files added to the render list
   if (
     projectRenderConfig.filesToRender.length > 3 &&
     projectRenderConfig.options.flags &&
@@ -453,7 +453,7 @@ export async function renderProject(
     return (dir: string, copy = false) => {
       const targetDir = join(destinationDir, dir);
       const srcDir = join(projDir, dir);
-      // Dont' remove the directory unless there is a source
+      // Don't remove the directory unless there is a source
       // directory that we can relocate
       //
       // If we intend for the directory relocated to be used to

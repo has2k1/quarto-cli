@@ -23,7 +23,7 @@ renderVerifyLatexOutput(docs("latex-output/figure-div.qmd"), [
 // All captions should be placed at the bottom
 // Note that the 'D' or '\\' are present after the caption command because one of the
 // test tables purposely msisses the caption handling to be sure that we don't
-// completely destory the document. Be sure that any test document captions that must be
+// completely destroy the document. Be sure that any test document captions that must be
 // moved started with D or have a label.
 renderVerifyLatexOutput(docs("latex-output/table-captions.qmd"), [
   /\\end{document}/,

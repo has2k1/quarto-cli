@@ -48,7 +48,7 @@ export function asErrorEx(e: unknown, defaultShowStack = true) {
   if (e instanceof ErrorEx) {
     return e;
   } else if (e instanceof Error) {
-    // ammend this error rather than creating a new ErrorEx
+    // amend this error rather than creating a new ErrorEx
     // so that the stack trace survives
 
     (e as any).printName = e.name !== "Error";

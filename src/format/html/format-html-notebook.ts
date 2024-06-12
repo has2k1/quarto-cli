@@ -96,7 +96,7 @@ export function notebookViewPostProcessor() {
   };
 }
 
-// Processes embeds within an HTML page and emits notebook previews as apprpriate
+// Processes embeds within an HTML page and emits notebook previews as appropriate
 // Perhaps in render services or elsewhere, we can pass a notebook renderer that will
 // demand render a notebook (or use an already rendered notebook if it was discovered as a part of
 // a project and rendered to the correct format)

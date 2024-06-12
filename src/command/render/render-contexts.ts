@@ -500,7 +500,7 @@ async function resolveFormats(
     const directoryFormat = directoryFormats[format].format;
     const inputFormat = inputFormats[format].format;
 
-    // resolve theme (project-level bootstrap theme always wins for web drived output)
+    // resolve theme (project-level bootstrap theme always wins for web output)
     if (
       project &&
       (isHtmlOutput(format, true) || isHtmlDashboardOutput(format)) &&

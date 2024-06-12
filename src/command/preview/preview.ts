@@ -248,7 +248,7 @@ export async function preview(
       changeHandler.render,
     );
 
-  // open browser if this is a browseable format
+  // open browser if this is a browsable format
   const initialPath = isPdfContent(result.outputFile)
     ? kPdfJsInitialPath
     : project

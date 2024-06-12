@@ -102,7 +102,7 @@ export function dashboardFormat() {
 
         // Forward the theme along (from either the html format
         // or from the dashboard format)
-        // TODO: There must be a beter way to do this
+        // TODO: There must be a better way to do this
         if (isWebsiteProject) {
           const formats: Record<string, Metadata> = format.metadata
             .format as Record<string, Metadata>;

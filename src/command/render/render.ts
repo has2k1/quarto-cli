@@ -145,7 +145,7 @@ export async function renderPandoc(
   );
 
   // resolve markdown. for [  ] output type we collect up
-  // the includes so they can be proccessed by Lua
+  // the includes so they can be processed by Lua
   let markdownInput = notebookResult.markdown
     ? notebookResult.markdown
     : executeResult.markdown;
@@ -472,7 +472,7 @@ export function renderResultFinalOutput(
     finalOutput = join(dirname(finalInput), finalOutput);
   }
 
-  // if the final output doesn't exist then we must have been targetin stdout,
+  // if the final output doesn't exist then we must have been targeting stdout,
   // so return undefined
   if (!safeExistsSync(finalOutput)) {
     return undefined;

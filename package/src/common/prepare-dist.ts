@@ -111,7 +111,7 @@ export async function prepareDist(
   }
   
 
-  // Place the quarto sciprt
+  // Place the quarto script
   // Move the quarto script into place
   info("Moving Quarto script");
   copyQuartoScript(config, config.directoryInfo.pkgWorking.bin);

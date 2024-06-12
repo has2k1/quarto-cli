@@ -4,7 +4,7 @@
  * Copyright (C) 2020-2023 Posit Software, PBC
  */
 
-// Generates key values for CSS text highlighing variables
+// Generates key values for CSS text highlighting variables
 export function generateCssKeyValues(textValues: Record<string, unknown>) {
   const lines: string[] = [];
   Object.keys(textValues).forEach((textAttr) => {

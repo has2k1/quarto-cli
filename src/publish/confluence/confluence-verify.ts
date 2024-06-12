@@ -38,7 +38,7 @@ const verifyLocationExists = async (server: string) => {
       throw new Error("");
     }
   } catch (error) {
-    trace("server doesnt exist", error);
+    trace("server does not exist", error);
     throw new Error(`${server} doesn't exist`);
   }
 };

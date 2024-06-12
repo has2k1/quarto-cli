@@ -959,7 +959,7 @@ export type CslItemShared = {
     string /* Identifier of the item in the input data file (analogous to BiTeX entrykey);
 
 Use this variable to facilitate conversion between word-processor and plain-text writing systems;
-For an identifer intended as formatted output label for a citation
+For an identifier intended as formatted output label for a citation
 (e.g. “Ferr78”), use `citation-label` instead */;
   "citation-label"?:
     string /* Label identifying the item in in-text citations of label styles (e.g. "Ferr78");
@@ -1023,7 +1023,7 @@ Also use for titles of periodical special issues, special sections, and the like
   "year-suffix"?:
     string /* Disambiguating year suffix in author-date styles (e.g. "a" in "Doe, 1999a"). */;
   accessed?: CslDate;
-  annote?:
+  annotate?:
     string /* Short markup, decoration, or annotation to the item (e.g., to indicate items included in a review);
 
 For descriptive text (e.g., in an annotated bibliography), use `note` instead */;

@@ -680,7 +680,7 @@ async function internalPreviewServer(
       }
     },
 
-    // handle 404 by returing site custom 404 page
+    // handle 404 by returning site custom 404 page
     on404: (url: string, req: Request) => {
       const print = !basename(url).startsWith("jupyter-");
       let body = new TextEncoder().encode("Not Found");
@@ -906,7 +906,7 @@ function acquirePreviewLock(project: ProjectContext) {
   // write our pid to the lockfile
   Deno.writeTextFileSync(lockfile, String(Deno.pid));
 
-  // rmeove the lockfile when we exit
+  // remove the lockfile when we exit
   onCleanup(() => releasePreviewLock(project));
 }
 
@@ -1001,7 +1001,7 @@ async function serveFiles(
         );
       }
     } else {
-      warning("Unabled to resolve output target for " + inputFile);
+      warning("Unable to resolve output target for " + inputFile);
     }
   }
 

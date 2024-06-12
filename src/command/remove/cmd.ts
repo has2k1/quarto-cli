@@ -147,7 +147,7 @@ export const removeCommand = new Command()
     },
   );
 
-// note that we're using variadic arguments here to preserve backware compatibility.
+// note that we're using variadic arguments here to preserve backward compatibility.
 export const resolveCompatibleArgs = (
   args: string[],
   defaultAction: "extension" | "tool",

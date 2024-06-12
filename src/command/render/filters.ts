@@ -292,7 +292,7 @@ function extractIncludeParams(
     }
   }
 
-  // remove includs from args
+  // remove includes from args
   const removeArgs = new Map<string, boolean>();
   removeArgs.set(kIncludeInHeader, true);
   removeArgs.set(kIncludeBeforeBody, true);
@@ -751,7 +751,7 @@ export async function resolveFilters(
   filters = filters.filter((filter) => filter !== kQuartoCiteProcMarker);
   const citeproc = citeMethod(options) === kQuartoCiteProcMarker;
   if (citeproc) {
-    // If we're explicitely adding the citeproc filter, turn off
+    // If we're explicitly adding the citeproc filter, turn off
     // citeproc: true so it isn't run twice
     // See https://github.com/quarto-dev/quarto-cli/issues/2393
     if (pandoc.citeproc === true) {

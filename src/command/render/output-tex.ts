@@ -58,7 +58,7 @@ export function texToPdfOutputRecipe(
 
   const texStem = texSafeFilename(`${inputStem}${fixupInputName}`);
 
-  // cacluate output and args for pandoc (this is an intermediate file
+  // calculate output and args for pandoc (this is an intermediate file
   // which we will then compile to a pdf and rename to .tex)
   const output = texStem + ".tex";
   let args = options.pandocArgs || [];
@@ -70,7 +70,7 @@ export function texToPdfOutputRecipe(
   }
 
   // when pandoc is done, we need to run the pdf generator and then copy the
-  // ouptut to the user's requested destination
+  // output to the user's requested destination
   const complete = async (pandocOptions: PandocOptions) => {
     const input = join(inputDir, output);
     const pdfOutput = await pdfGenerator.generate(input, format, pandocOptions);

@@ -172,7 +172,7 @@ export async function publishDeployments(
         }
       }
     } else {
-      warning(`Unkonwn provider ${providerName}`);
+      warning(`Unknown provider ${providerName}`);
     }
   }
 
@@ -180,13 +180,13 @@ export async function publishDeployments(
 }
 
 export async function chooseDeployment(
-  depoyments: PublishDeploymentWithAccount[],
+  deployments: PublishDeploymentWithAccount[],
 ): Promise<PublishDeploymentWithAccount | undefined> {
   // filter out deployments w/o target url (provided from cli)
-  depoyments = depoyments.filter((deployment) => !!deployment.target.url);
+  deployments = deployments.filter((deployment) => !!deployment.target.url);
 
   // collect unique origins
-  const originCounts = depoyments.reduce((origins, deployment) => {
+  const originCounts = deployments.reduce((origins, deployment) => {
     try {
       const originUrl = new URL(deployment.target.url!).origin;
       const count = origins.get(originUrl) || 0;
@@ -198,7 +198,7 @@ export async function chooseDeployment(
   }, new Map<string, number>());
 
   const kOther = "other";
-  const options = depoyments
+  const options = deployments
     .map((deployment) => {
       let url = deployment.target.url;
       try {
@@ -234,7 +234,7 @@ export async function chooseDeployment(
   }]);
 
   if (confirm.destination !== kOther) {
-    return depoyments.find((deployment) =>
+    return deployments.find((deployment) =>
       publishRecordIdentifier(deployment.target, deployment.account) ===
         confirm.destination
     );

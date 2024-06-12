@@ -484,7 +484,7 @@ export async function htmlFormatExtras(
     }
     const utterances = options.utterances as Record<string, string>;
     if (!utterances["repo"]) {
-      throw new Error("Invalid utterances coniguration (must provide a repo)");
+      throw new Error("Invalid utterances configuration (must provide a repo)");
     }
     utterances["issue-term"] = utterances["issue-term"] || "pathname";
     utterances["theme"] = utterances["theme"] || "github-light";
@@ -676,7 +676,7 @@ function htmlFormatPostprocessor(
         code.parentElement?.classList.add("hidden");
       }
 
-      // insert code copy button (with specfic attribute when inside a modal)
+      // insert code copy button (with specific attribute when inside a modal)
       if (codeCopy) {
         code.classList.add("code-with-copy");
         const copyButton = createCodeCopyButton(doc, format);
@@ -999,7 +999,7 @@ function themeFormatExtras(
   input: string,
   flags: PandocFlags,
   format: Format,
-  sevices: RenderServices,
+  services: RenderServices,
   offset: string | undefined,
   project: ProjectContext,
   quiet?: boolean,
@@ -1018,7 +1018,7 @@ function themeFormatExtras(
       input,
       flags,
       format,
-      sevices,
+      services,
       offset,
       project,
       quiet,

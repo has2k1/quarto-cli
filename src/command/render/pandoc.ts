@@ -335,7 +335,7 @@ export async function runPandoc(
   // pass the format language along to filter params
   formatFilterParams["language"] = options.format.language;
 
-  // if there is no toc title then provide the appropirate default
+  // if there is no toc title then provide the appropriate default
   if (
     !options.format.metadata[kTocTitle] && !isAstOutput(options.format.pandoc)
   ) {
@@ -355,7 +355,7 @@ export async function runPandoc(
     options.format.pandoc.toc = true;
   }
 
-  // if there is an abtract then forward abtract-title
+  // if there is an abstract then forward abstract-title
   if (
     options.format.metadata[kAbstract] &&
     (isHtmlDocOutput(options.format.pandoc) ||
@@ -574,7 +574,7 @@ export async function runPandoc(
     // or by the project as format extras
     if (extras[kNotebooks]) {
       const documentNotebooks = options.format.render[kNotebookView];
-      // False means taht the user has explicitely disabled notebooks
+      // False means that the user has explicitly disabled notebooks
       if (documentNotebooks !== false) {
         const userNotebooks = documentNotebooks === true
           ? []
@@ -854,7 +854,7 @@ export async function runPandoc(
   }
   allDefaults.from = resourcePath("filters/qmd-reader.lua");
 
-  // set parameters required for filters (possibily mutating all of it's arguments
+  // set parameters required for filters (possibly mutating all of it's arguments
   // to pull includes out into quarto parameters so they can be merged)
   let pandocArgs = args;
   const paramsJson = await filterParamsJson(
@@ -970,10 +970,10 @@ export async function runPandoc(
   // remove front matter from markdown (we've got it all incorporated into options.format.metadata)
   // also save the engine metadata as that will have the result of e.g. resolved inline expressions,
   // (which we will use immediately below)
-  const paritioned = partitionYamlFrontMatter(options.markdown);
+  const partitioned = partitionYamlFrontMatter(options.markdown);
   const engineMetadata =
-    (paritioned?.yaml ? readYamlFromMarkdown(paritioned.yaml) : {}) as Metadata;
-  const markdown = paritioned?.markdown || options.markdown;
+    (partitioned?.yaml ? readYamlFromMarkdown(partitioned.yaml) : {}) as Metadata;
+  const markdown = partitioned?.markdown || options.markdown;
 
   // selectively overwrite some resolved metadata (e.g. ensure that metadata
   // computed from inline r expressions gets included @ the bottom).
@@ -1054,7 +1054,7 @@ export async function runPandoc(
   }
 
   // Ensure that there are institutes around for use when resolving authors
-  // and affilations
+  // and affiliations
   const instituteRaw = pandocMetadata[kInstitute];
   if (instituteRaw) {
     pandocMetadata[kInstitutes] = Array.isArray(instituteRaw)
@@ -1345,7 +1345,7 @@ async function resolveExtras(
   // If we're generating the PDF, we can move the format resources once the pandoc
   // render has completed.
   if (format.render[kLatexAutoMk] === false) {
-    // Process the format resouces right here on the spot
+    // Process the format resources right here on the spot
     await processFormatResources(inputDir, dependenciesFile);
   } else {
     const resourceDependenciesPostProcessor = async (_output: string) => {

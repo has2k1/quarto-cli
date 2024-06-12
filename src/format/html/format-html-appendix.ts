@@ -173,7 +173,7 @@ export async function processDocumentAppendix(
       }
     }
 
-    // Place Re-use, if appropriate
+    // Place Reuse, if appropriate
     if (format.metadata[kLicense]) {
       addSection((sectionEl) => {
         const contentsDiv = doc.createElement("DIV");

@@ -45,7 +45,7 @@ export async function resolveAccount(
     };
   }
 
-  // see what tyep of token we are going to use
+  // see what type of token we are going to use
   let token: AccountToken | undefined;
 
   // build list of account options
