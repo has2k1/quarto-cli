@@ -91,9 +91,9 @@ for (let i = 0; i < lines.length; i += 2) {
   // Ignore `./test.ts` as it is a helper file only
   if (/(^|\/)test\.ts$/.test(name)) continue;
   if (RegSmokeAllFile.test(name)) {
-    // Detailled smoke-all timed tests are found
+    // Detailed smoke-all timed tests are found
     if (!detailedSmokeAll) {
-      // Detailled tests are not used so they are ignored.
+      // Detailed tests are not used so they are ignored.
       dontUseDetailledSmokeAll = true;
       continue;
     } else {
@@ -154,7 +154,7 @@ for (let i = 0; i < nBuckets; ++i) {
   buckets.push([]);
 }
 
-// If we don't use detailled smoke-all, be sure to place smoke-all.tests.ts first for its own bucket
+// If we don't use detailed smoke-all, be sure to place smoke-all.tests.ts first for its own bucket
 if (dontUseDetailledSmokeAll) {
   failed = true;
   flags.verbose &&

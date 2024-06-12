@@ -98,7 +98,7 @@ export async function quarto(
   }
 
   // inject implicit cwd arg for quarto preview/render whose
-  // first argument is a command line parmaeter. this allows
+  // first argument is a command line parameter. this allows
   // us to evade a cliffy cli parsing issue where it requires
   // at least one defined argument to be parsed before it can
   // access undefined arguments.

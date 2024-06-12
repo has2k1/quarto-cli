@@ -50,7 +50,7 @@ export interface TestContext {
   cwd?: () => string;
 
   // Control of underlying sanitizer
-  santize?: { resources?: boolean; ops?: boolean; exit?: boolean };
+  sanitize?: { resources?: boolean; ops?: boolean; exit?: boolean };
 
   // control if test is ran or skipped
   ignore?: boolean;
@@ -125,9 +125,9 @@ export function test(test: TestDescriptor) {
     ? `[${test.type}] > ${test.name} (${test.context.name})`
     : `[${test.type}] > ${test.name}`;
 
-  const sanitizeResources = test.context.santize?.resources;
-  const sanitizeOps = test.context.santize?.ops;
-  const sanitizeExit = test.context.santize?.exit;
+  const sanitizeResources = test.context.sanitize?.resources;
+  const sanitizeOps = test.context.sanitize?.ops;
+  const sanitizeExit = test.context.sanitize?.exit;
   const ignore = test.context.ignore;
   const userSession = !runningInCI();
 
