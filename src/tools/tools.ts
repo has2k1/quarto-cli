@@ -90,7 +90,7 @@ export function checkToolRequirement(name: string) {
       "https://pptr.dev/next/troubleshooting#running-puppeteer-on-wsl-windows-subsystem-for-linux.";
     warning([
       `${name} can't be installed fully on WSL with Quarto as system requirements could be missing.`,
-      `- Please do a manual installation following recommandations at ${troubleshootUrl}`,
+      `- Please do a manual installation following recommendations at ${troubleshootUrl}`,
       "- See https://github.com/quarto-dev/quarto-cli/issues/1822 for more context.",
     ].join("\n"));
     return false;

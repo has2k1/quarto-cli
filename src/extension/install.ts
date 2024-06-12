@@ -143,7 +143,7 @@ async function determineInstallDir(
   embed?: string,
 ) {
   if (embed) {
-    // We're embeddeding this within an extension
+    // We're embedding this within an extension
     const extensionName = embed;
     const context = createExtensionContext();
 
@@ -164,7 +164,7 @@ async function determineInstallDir(
       );
     }
   } else {
-    // We're not embeddeding, check if we're in a project
+    // We're not embedding, check if we're in a project
     // and offer to use that directory if we are
     const nbContext = notebookContext();
     const project = await projectContext(dir, nbContext);

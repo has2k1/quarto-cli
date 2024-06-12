@@ -300,7 +300,7 @@ export async function publishDocument(
         });
       } else {
         throw new Error(
-          `The specifed document (${document}) is not a valid quarto input file`,
+          `The specified document (${document}) is not a valid quarto input file`,
         );
       }
     }

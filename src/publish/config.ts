@@ -50,7 +50,7 @@ export function readPublishDeployments(
         }
       } else {
         warning(
-          "Unexpcted format for _publish.yml file (not reading publish history)",
+          "Unexpected format for _publish.yml file (not reading publish history)",
         );
       }
     }
@@ -117,7 +117,7 @@ export function writePublishDeployment(
       );
     } else {
       warning(
-        "Unexpcted format for _publish.yml file (not writing to publish history)",
+        "Unexpected format for _publish.yml file (not writing to publish history)",
       );
     }
   } else {

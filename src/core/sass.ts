@@ -97,7 +97,7 @@ export async function compileSass(
 
   // Read the scss files into a single input string
   // * Functions are available to variables and rules
-  //   (framework functions are first to make them acessible to all)
+  //   (framework functions are first to make them accessible to all)
   // * Variables are applied in reverse order
   //   (first variable generally takes precedence in sass assuming use of !default)
   // * Mixins are available to rules as well

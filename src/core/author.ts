@@ -76,9 +76,9 @@ export function parseAuthor(authorRaw: unknown, strict?: boolean) {
           const auth: Author = {
             name,
           };
-          const affilation = author[kAffiliation];
-          if (affilation) {
-            auth.affilliation = { name: affilation };
+          const affiliation = author[kAffiliation];
+          if (affiliation) {
+            auth.affilliation = { name: affiliation };
             if (author[kAfilliationUrl]) {
               auth.affilliation.url = author[kAfilliationUrl];
             }

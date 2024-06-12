@@ -718,7 +718,7 @@ export interface FormatLanguage {
   [kDraftLabel]?: string;
   [kManuscriptMecaBundle]?: string;
 
-  // langauge variations e.g. eg, fr, etc.
+  // language variations e.g. eg, fr, etc.
   [key: string]: unknown;
 }
 

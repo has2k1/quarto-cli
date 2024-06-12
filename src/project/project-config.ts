@@ -97,7 +97,7 @@ export async function partitionedMarkdownForInput(
   project: ProjectContext,
   input: string,
 ) {
-  // first see if we can get the partioned markdown out of the index
+  // first see if we can get the partitioned markdown out of the index
   const { index } = readInputTargetIndex(project.dir, input);
   if (index) {
     return index.markdown;

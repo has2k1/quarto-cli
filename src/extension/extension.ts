@@ -111,7 +111,7 @@ export function createExtensionContext(): ExtensionContext {
     });
   };
 
-  // Reads a specific extension avialable to an input
+  // Reads a specific extension available to an input
   const extension = async (
     name: string,
     input: string,
@@ -392,7 +392,7 @@ export function extensionProjectType(
   }
 }
 
-// Fixes up paths for metatadata provided by an extension
+// Fixes up paths for metadata provided by an extension
 function resolveExtensionPaths(
   extension: Extension,
   input: string,

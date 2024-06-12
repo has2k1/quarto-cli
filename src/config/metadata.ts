@@ -218,7 +218,7 @@ export function metadataAsFormat(metadata: Metadata): Format {
     };
   }
 
-  // coalese ipynb-filter to ipynb-filters
+  // coalesce ipynb-filter to ipynb-filters
   const filter = format.execute[kIpynbFilter];
   if (typeof filter === "string") {
     typedFormat.execute[kIpynbFilters] = typedFormat.execute[kIpynbFilters] ||
@@ -295,7 +295,7 @@ export function mergeProjectMetadata<T>(
   config: T,
   ...configs: Array<T>
 ) {
-  // certain keys that expand into arrays should be overriden if they
+  // certain keys that expand into arrays should be overridden if they
   // are just a string
   const kExandableStringKeys = ["contents"];
 

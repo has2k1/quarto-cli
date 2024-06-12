@@ -34,7 +34,7 @@ export function watchForFileChanges(
     }
   };
 
-  // inialize last modified times at startup
+  // initialize last modified times at startup
   const lastModified = new Map<string, Date | null>();
   fileList().forEach((file) =>
     lastModified.set(file, existsSync(file) ? Deno.statSync(file).mtime : null)

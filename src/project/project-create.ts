@@ -155,7 +155,7 @@ export async function projectCreate(options: ProjectCreateOptions) {
   }
 }
 
-// validate and potentialy provide some defaults
+// validate and potentially provide some defaults
 async function readOptions(options: ProjectCreateOptions) {
   options = ld.cloneDeep(options);
 
@@ -226,7 +226,7 @@ function projectMarkdownFile(
   // content
   lines.push(content);
 
-  // see if the engine has defautl content
+  // see if the engine has default content
   if (!noEngineContent) {
     const engineContent = engine.defaultContent(kernel);
     if (engineContent.length > 0) {

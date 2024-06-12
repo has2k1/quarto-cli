@@ -73,7 +73,7 @@ export async function knitrCapabilities(rBin: string | undefined) {
     });
     if (result.success && result.stdout) {
       debug(
-        "\n++ Parsing results to get informations about knitr capabilities",
+        "\n++ Parsing results to get information about knitr capabilities",
       );
       const yamlLines = result.stdout
         .replace(/^.*--- YAML_START ---/sm, "")

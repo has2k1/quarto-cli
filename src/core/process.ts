@@ -205,7 +205,7 @@ function filteredAsyncIterator(
   });
 }
 
-// Processes ouptut from an interator (stderr, stdout, etc...)
+// Processes output from an iterator (stderr, stdout, etc...)
 async function processOutput(
   iterator: AsyncIterable<Uint8Array>,
   output?: "piped" | "inherit" | "null" | number,

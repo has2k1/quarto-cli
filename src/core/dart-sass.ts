@@ -39,7 +39,7 @@ export async function dartCompile(
     outputFilePath,
     "--style",
     compressed ? "compressed" : "expanded",
-    "--quiet", // Remove this flag to get depedency warnings from SASS
+    "--quiet", // Remove this flag to get dependency warnings from SASS
   ];
 
   if (loadPaths) {

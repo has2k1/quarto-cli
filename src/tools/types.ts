@@ -25,7 +25,7 @@ export interface InstallableTool {
 }
 
 // Prerequisites to installation. These will be checked before installation
-// and if any return false, the message will be displaed and installation will be
+// and if any return false, the message will be displayed and installation will be
 // halted
 export interface InstallPreReq {
   check: (context: InstallContext) => Promise<boolean>;

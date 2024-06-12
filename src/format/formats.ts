@@ -208,7 +208,7 @@ export function defaultWriterFormat(to: string): Format {
         writerFormat = jatsFormat("JATS Authoring", "xml");
         break;
       case "jats_publishing":
-        writerFormat = jatsFormat("JATS Publising", "xml");
+        writerFormat = jatsFormat("JATS Publishing", "xml");
         break;
 
       case "ipynb":

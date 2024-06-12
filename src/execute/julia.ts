@@ -156,10 +156,10 @@ export const juliaEngine: ExecutionEngine = {
       options.format.pandoc.to,
     );
 
-    // NOTE: for perforance reasons the 'nb' is mutated in place
+    // NOTE: for performance reasons the 'nb' is mutated in place
     // by jupyterToMarkdown (we don't want to make a copy of a
     // potentially very large notebook) so should not be relied
-    // on subseuqent to this call
+    // on subsequent to this call
 
     const result = await jupyterToMarkdown(
       nb,
@@ -657,7 +657,7 @@ async function writeJuliaCommand(
     }
     trace(options, "received server response");
     // one command should be sent, ended by a newline, currently just throwing away anything else because we don't
-    // expect multiple commmands at once
+    // expect multiple commands at once
     const json = response.split("\n")[0];
     const data = JSON.parse(json);
 
