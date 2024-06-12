@@ -138,7 +138,7 @@ Add a language to syntax highlight code blocks:
 1 + 1
 ```
 
-Pandoc supports syntax highlighting for over 140 different languages. If your language is not supported then you can use the `default` langauge to get a similar visual treatment:
+Pandoc supports syntax highlighting for over 140 different languages. If your language is not supported then you can use the `default` language to get a similar visual treatment:
 
 ```` markdown
 ```default
@@ -285,7 +285,7 @@ Figures are center aligned by default. Add the `fig-align` attribute to the imag
 
 <!-- TODO Better Preview for figure alignment -->
 
-![Elephant](elephant.png){fig-align="right"} <!-- // NOTE:  Must have carrige return or else this will be emitted as an Image and not a Captioned Image --> ![Elephant](elephant.png){fig-align="left"}
+![Elephant](elephant.png){fig-align="right"} <!-- // NOTE:  Must have carriage return or else this will be emitted as an Image and not a Captioned Image --> ![Elephant](elephant.png){fig-align="left"}
 
 Note that figure captions are left aligned to accommodate longer caption text (which looks odd when center aligned).
 

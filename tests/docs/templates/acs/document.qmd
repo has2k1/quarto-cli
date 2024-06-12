@@ -250,7 +250,7 @@ outcome should be taken as a \emph{guide} to the final length. The
 spacing and sizing of graphical content is an area where there is
 some flexibility in the process.  You should not worry about the
 space before and after graphics, which is set to give a guide to the
-published size. This is very dependant on the final published layout.
+published size. This is very dependent on the final published layout.
 
 You should be able to use the same source to produce a JACS
 Communication and a normal article.  For example, this demonstration

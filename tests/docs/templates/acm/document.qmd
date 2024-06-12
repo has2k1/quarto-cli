@@ -41,7 +41,7 @@ Duis nec purus sed neque porttitor tincidunt vitae quis augue. Donec porttitor a
 ---
 references:
 - id: meier2012
-  title: Professinal Android 4 Application Development
+  title: Professional Android 4 Application Development
   author: 
   - family: Meier
     given: Reto
