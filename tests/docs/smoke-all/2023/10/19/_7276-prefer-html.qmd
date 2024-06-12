@@ -15,7 +15,7 @@ _quarto:
         - []
 ---
 
-This test will do snapshoting of the HTML widgets, so it requires chrome / chromium with **webshot2** or phantomjs with **webshot** to work. 
+This test will do snapshotting of the HTML widgets, so it requires chrome / chromium with **webshot2** or phantomjs with **webshot** to work. 
 TODO: See how to configure our test suites for this
 
 ```{r}

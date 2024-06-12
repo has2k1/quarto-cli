@@ -25,7 +25,7 @@ format:
 
 ::: {#nte-1 .callout-note}
 
-This is a note that can be crossreferenced.
+This is a note that can be cross-referenced.
 
 :::
 
