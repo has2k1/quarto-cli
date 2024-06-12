@@ -107,7 +107,7 @@ _quarto:
           - '</article-meta>' # basic JATS 
           - '<contrib contrib-type="author" equal-contrib="yes" corresp="yes">' #author
           - '<string-name>Norah Jones</string-name>' #author
-          - '<copyright-statement>' #copright metadata
+          - '<copyright-statement>' #copyright metadata
           - '<kwd>weather</kwd>' # keywords
           - '<funding-group>' #funding metadata
           - '<boxed-text>[\s\S]*?<bold>Attention</bold>[\s\S]*?</boxed-text>' # callout
