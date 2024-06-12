@@ -216,7 +216,7 @@ if {is_shiny}:
       return x
 
     # ideally we would undo the call to ast_transformers.append
-    # at the end of this block whenver an error occurs, we do 
+    # at the end of this block whenever an error occurs, we do 
     # this for now as it will only be a problem if the user 
     # switches from shiny to not-shiny mode (and even then likely
     # won't matter)
