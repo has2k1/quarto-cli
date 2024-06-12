@@ -216,7 +216,7 @@ export async function bookBibliographyPostRender(
         // either append this to the end of the references file or replace an explicit
         // refs div in the references file
 
-        // genereate bibliography html
+        // generate bibliography html
         const biblioHtml = await generateBibliography(
           context,
           bibliographyPaths,

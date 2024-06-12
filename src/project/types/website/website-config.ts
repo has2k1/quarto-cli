@@ -359,7 +359,7 @@ export function websiteProjectConfig(
 
   const siteMeta = (config[kWebsite] || {}) as Metadata;
 
-  // get default title from project if requred
+  // get default title from project if required
   siteMeta[kSiteTitle] = siteMeta[kSiteTitle] || config.project[kProjectTitle];
 
   if (flags?.siteUrl) {

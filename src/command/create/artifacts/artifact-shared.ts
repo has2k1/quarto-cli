@@ -33,7 +33,7 @@ export function renderAndCopyArtifacts(
   ensureDirSync(target);
 
   // Walk the artifact directory, copying to the target
-  // directoy and rendering as we go
+  // directory and rendering as we go
   const copiedFiles: string[] = [];
   for (const artifact of walkSync(artifactSrcDir)) {
     if (artifact.isFile) {

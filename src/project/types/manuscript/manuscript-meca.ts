@@ -63,7 +63,7 @@ export const shouldMakeMecaBundle = (
   manuConfig?: ManuscriptConfig,
 ) => {
   if (!manuConfig || manuConfig[kMecaBundle] !== false) {
-    // See if it was explicitely on
+    // See if it was explicitly on
     if (manuConfig && manuConfig[kMecaBundle] === true) {
       return true;
     }
@@ -77,7 +77,7 @@ export const shouldMakeMecaBundle = (
       }
     });
   } else {
-    // Explicitely turned off
+    // Explicitly turned off
     return false;
   }
 };

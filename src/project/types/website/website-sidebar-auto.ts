@@ -120,7 +120,7 @@ async function sidebarItemsFromAuto(
   // list of globs from auto
   const globs: string[] = globsFromAuto(project, auto);
 
-  // scan for inputs and organize them into heirarchical nodes
+  // scan for inputs and organize them into hierarchical nodes
   const entries: Entry[] = [];
   for (const nodeSet of autoSidebarNodes(project, globs)) {
     // if this is an auto-dir that has an index page inside it
@@ -197,7 +197,7 @@ function autoSidebarNodes(
       directory = match[1];
     }
 
-    // split into directory heirarchy
+    // split into directory hierarchy
     let result: Record<string, SidebarNodes> = {};
     inputs.forEach((p) =>
       p.split("/").reduce(

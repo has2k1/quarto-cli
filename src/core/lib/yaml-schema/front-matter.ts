@@ -46,7 +46,7 @@ export async function makeFrontMatterFormatSchema(nonStrict = false) {
   };
   const formatSchemaDescriptorList = (await pandocFormatsResource()).concat(
     "md", // alias for 'commonmark'
-    "hugo", // tolerage for compatibility: initially built-in, now referrred to as 'hugo-md'
+    "hugo", // tolerage for compatibility: initially built-in, now referred to as 'hugo-md'
     "dashboard", // our built in format for dashboards
     "email", // for the HTML email format (used with Posit Connect)
   )

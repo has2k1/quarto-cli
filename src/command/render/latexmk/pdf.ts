@@ -168,7 +168,7 @@ async function initialCompileLatex(
       quiet,
     );
 
-    // Check whether it suceeded. We'll consider it a failure if there is an error status or output is missing despite a success status
+    // Check whether it succeeded. We'll consider it a failure if there is an error status or output is missing despite a success status
     // (PNAS Template may eat errors when missing packages exists)
     // See: https://github.com/rstudio/tinytex/blob/6c0078f2c3c1319a48b71b61753f09c3ec079c0a/R/latex.R#L216
     const success = response.result.code === 0 &&
@@ -216,7 +216,7 @@ async function initialCompileLatex(
       );
 
       if (packagesInstalled) {
-        // try the intial compile again
+        // try the initial compile again
         continue;
       } else {
         // We failed to install packages (but there are missing packages), give up

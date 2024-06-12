@@ -28,7 +28,7 @@ export function findMissingFontsAndPackages(
   return ld.uniq([...missingPackages, ...missingFonts]);
 }
 
-// Does the log file indicate recompilation is neeeded
+// Does the log file indicate recompilation is needed
 export function needsRecompilation(log: string) {
   if (existsSync(log)) {
     const logContents = Deno.readTextFileSync(log);

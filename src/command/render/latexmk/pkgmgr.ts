@@ -35,7 +35,7 @@ export function packageManager(
     installPackages: async (pkgs: string[]) => {
       // See whether we just tried to install the same packages or
       // if there are no packages detected to install
-      // (if so, just give up as we can't suceed)
+      // (if so, just give up as we can't succeed)
       const difference = ld.difference(pkgs, lastPkgs);
       if (difference.length > 0) {
         // Attempt to install the packages

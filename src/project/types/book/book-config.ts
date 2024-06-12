@@ -241,7 +241,7 @@ export async function bookProjectConfig(
   }
 
   // save our own render list (which has more fine grained info about parts,
-  // appendices, numbering, etc.) and popuplate the main config render list
+  // appendices, numbering, etc.) and populate the main config render list
   const renderItems = await bookRenderItems(project, language, config);
   book[kBookRender] = renderItems;
   config.project[kProjectRender] = renderItems
