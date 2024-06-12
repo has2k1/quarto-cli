@@ -486,7 +486,7 @@ return result
 filters = filters.filter((filter) => filter !== kQuartoCiteProcMarker);
 const citeproc = citeMethod(options) === kQuartoCiteProcMarker;
 if (citeproc) {
-  // If we're explicitely adding the citeproc filter, turn off
+  // If we're explicitly adding the citeproc filter, turn off
   // citeproc: true so it isn't run twice
   // See https://github.com/quarto-dev/quarto-cli/issues/2393
   if (options.format.pandoc.citeproc === true) {
