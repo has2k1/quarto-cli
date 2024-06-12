@@ -181,9 +181,9 @@ export function templateMarkdownHandler(
   );
 
   // Collapses repeated whitespace
-  // this allows whitespace to appear, but prevents a huge amount of whitepsace from making
+  // this allows whitespace to appear, but prevents a huge amount of whitespace from making
   // super cluttered HTML
-  // whitespace is imporant since this prevents Pandoc from interpretting run-on HTML
+  // whitespace is important since this prevents Pandoc from interpreting run-on HTML
   // as potentially containing inlines, for example
   // https://github.com/quarto-dev/quarto-cli/issues/6745
   templateRendered = templateRendered.replace(/(\r\n|\r|\n){2,}/g, "$1$1");

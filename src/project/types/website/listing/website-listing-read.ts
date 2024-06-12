@@ -559,7 +559,7 @@ function hydrateListing(
 
   // Don't include fields that the items don't have
   const fields = suggestedFields.filter((field) => {
-    // Always include image if suggeted
+    // Always include image if suggested
     if (field === kFieldImage) {
       return true;
     }
@@ -931,7 +931,7 @@ async function readContents(
       });
     });
 
-    debug(`[listing] afer including, ${filtered.length} item match listing`);
+    debug(`[listing] after including, ${filtered.length} item match listing`);
   }
 
   const excludes = listing[kExclude] as Record<string, unknown>;
@@ -943,7 +943,7 @@ async function readContents(
         return matchesField(item, field, excludes[field]);
       });
     });
-    debug(`[listing] afer excluding, ${filtered.length} item match listing`);
+    debug(`[listing] after excluding, ${filtered.length} item match listing`);
   }
 
   return {
@@ -1082,7 +1082,7 @@ async function listItemFromFile(
   ) as Metadata;
 
   // Consult the website project draft list directly here
-  // since this is occuring before the input index
+  // since this is occurring before the input index
   // is populated.
   const projectDraft = isProjectDraft(projectRelativePath, project);
   const draftMode = projectDraftMode(project);

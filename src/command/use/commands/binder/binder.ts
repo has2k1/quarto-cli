@@ -101,7 +101,7 @@ export const useBinderCommand = new Command()
             rConfig.date = verMatch[2];
           }
         } else {
-          warning("Unable to detect R version, ommitting R configuration");
+          warning("Unable to detect R version, omitting R configuration");
         }
       }
 
@@ -146,7 +146,7 @@ export const useBinderCommand = new Command()
       }
       table.indent(4).minColWidth(12).render();
 
-      // Note whether there are depedencies restored
+      // Note whether there are dependencies restored
       const isMarkdownEngineOnly = (engines: string[]) => {
         return engines.length === 1 && engines.includes("markdown");
       };

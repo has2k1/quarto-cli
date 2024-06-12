@@ -103,7 +103,7 @@
  *
  * ### Build Metadata
  *
- * Build metadata is `.` delimited alpha-numeric string.
+ * Build metadata is `.` delimited alphanumeric string.
  * When parsing a version it is retained on the `build: string[]` field
  * of the semver instance. When incrementing there is an additional parameter that
  * can set the build metadata on the semver instance.

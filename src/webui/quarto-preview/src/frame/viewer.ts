@@ -25,7 +25,7 @@ export function handleViewerMessages(inputFile: string | null) {
           ) {
             if (inputFile === null) {
               console.warn(
-                "Missing inputFile when atempting to open input file.",
+                "Missing inputFile when attempting to open input file.",
               );
               return;
             }
@@ -48,7 +48,7 @@ export function handleViewerMessages(inputFile: string | null) {
 
     if (inputFile === null) {
       console.warn(
-        "Missing inputFile when atempting to post message.",
+        "Missing inputFile when attempting to post message.",
       );
     } else {
       // notify host of navigation (e.g. for 'pop out' command)

@@ -143,7 +143,7 @@ const GTLT: number = R++;
 src[GTLT] = "((?:<|>)?=?)";
 
 // Something like "2.*" or "1.2.x".
-// Note that "x.x" is a valid xRange identifer, meaning "any version"
+// Note that "x.x" is a valid xRange identifier, meaning "any version"
 // Only the first item is strictly required.
 const XRANGEIDENTIFIERLOOSE: number = R++;
 src[XRANGEIDENTIFIERLOOSE] = src[NUMERICIDENTIFIERLOOSE] + "|x|X|\\*";
@@ -1699,7 +1699,7 @@ export function outside(
       throw new TypeError('Must provide a hilo val of "<" or ">"');
   }
 
-  // If it satisifes the range it is not outside
+  // If it satisfies the range it is not outside
   if (satisfies(version, range, optionsOrLoose)) {
     return false;
   }

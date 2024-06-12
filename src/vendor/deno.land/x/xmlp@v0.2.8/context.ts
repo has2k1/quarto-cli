@@ -73,8 +73,8 @@ export class Element extends QName {
     }
 
     get prefixMappings(): { ns: string, uri: string }[] {
-        const filterd = this._attributes.filter((attr) => (attr.prefix === 'xmlns'));
-        return filterd.map((attr) => ({ ns: attr.localPart, uri: attr.value }));
+        const filtered = this._attributes.filter((attr) => (attr.prefix === 'xmlns'));
+        return filtered.map((attr) => ({ ns: attr.localPart, uri: attr.value }));
     }
 }
 

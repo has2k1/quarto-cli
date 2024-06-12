@@ -196,7 +196,7 @@ export class Cookie {
     const attrAndValueList = unparsed.split(";");
 
     // first split is the key value pair,
-    // if theres no semicolon in the string, still the first element in array is key value pair
+    // if there's no semicolon in the string, still the first element in array is key value pair
     const keyValuePairString = trimTerminator(attrAndValueList.shift() || "")
       .trim();
     const keyValuePairEqualsIndex = keyValuePairString.indexOf("=");
@@ -345,7 +345,7 @@ export class Cookie {
         return true;
         // this one was a bit tricky to understand for me
         // quick explain:
-        // imagin two path where A is the cookie path and B and C is the requested paths:
+        // imagine two path where A is the cookie path and B and C is the requested paths:
         //    A: /foo
         //    B: /foo/bar --> true
         //    C: /foobar ---> false

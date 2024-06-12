@@ -115,7 +115,7 @@ export function estimateReadingTimeMinutes(
 
 export function findPreviewImgMd(markdown?: string): string | undefined {
   if (markdown) {
-    // Look for an explictly tagged image
+    // Look for an explicitly tagged image
     const explicitMatch = markdown.match(kMdPreviewClassRegex);
     if (explicitMatch) {
       return explicitMatch[1];

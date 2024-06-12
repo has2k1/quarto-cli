@@ -57,7 +57,7 @@ export function assertObjectMatch(
             filtered[key] = fn({ ...value }, { ...subset });
             continue;
           }
-        } // On regexp references, keep value as it to avoid loosing pattern and flags
+        } // On regexp references, keep value as it to avoid losing pattern and flags
         else if (value instanceof RegExp) {
           filtered[key] = value;
           continue;
