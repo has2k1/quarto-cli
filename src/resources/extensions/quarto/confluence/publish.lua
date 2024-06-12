@@ -100,7 +100,7 @@ function Writer (doc, opts)
         return pandoc.RawBlock('html', rawBlock.text)
       end
 
-      -- Raw blocks including arbirtary HTML like JavaScript are not supported in CSF
+      -- Raw blocks including arbitrary HTML like JavaScript are not supported in CSF
       return ""
     end,
     RawInline = function (inline)
