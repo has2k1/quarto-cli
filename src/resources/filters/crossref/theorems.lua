@@ -77,7 +77,7 @@ function crossref_theorems()
               el.content[1].content = preamble
             else
               if (el.content[1].t ~= "Para") then
-                -- required trick to get correct alignement when non Para content first
+                -- required trick to get correct alignment when non Para content first
                 preamble:insert(pandoc.RawInline('latex', "\\leavevmode"))
               end
               el.content:insert(1, pandoc.Plain(preamble))

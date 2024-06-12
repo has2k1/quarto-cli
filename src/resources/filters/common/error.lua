@@ -20,7 +20,7 @@ function internal_error()
 end
 
 function currentFile() 
-  -- if we're in a multifile contatenated render, return which file we're rendering
+  -- if we're in a multifile concatenated render, return which file we're rendering
   local fileState = currentFileMetadataState()
   if fileState ~= nil and fileState.file ~= nil and fileState.file.bookItemFile ~= nil then
     return fileState.file.bookItemFile

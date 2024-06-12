@@ -66,7 +66,7 @@ end
 
 function render_dashboard() 
 
-  -- only do this for dashboad output
+  -- only do this for dashboard output
   if not _quarto.format.isDashboardOutput() then
     return {}
   end
@@ -213,7 +213,7 @@ function render_dashboard()
         
         elseif el.classes:includes(dashboard.utils.constants.cell) and el.classes:includes("markdown") then
           
-          -- See if this is explicitely a markdown cell (being preserved by a notebook)
+          -- See if this is explicitly a markdown cell (being preserved by a notebook)
           -- If so, provide some special handling which pops any markdown cell first header
           -- out and then treats the rest of the cell as a card
 
@@ -287,7 +287,7 @@ function render_dashboard()
 
 
           -- If the element is marked hidden or the element
-          -- has bslib output (e.g. it is code that is outputing bslib components)
+          -- has bslib output (e.g. it is code that is outputting bslib components)
           -- give it special treatment
           if #bslibRawOutputs > 0 then
             -- If bslib outputs were detected, we need to elevate those rawblocks and 
@@ -308,7 +308,7 @@ function render_dashboard()
             end
             return el
           else
-            -- Look for markdown explictly being output
+            -- Look for markdown explicitly being output
             local options, userClasses = dashboard.card.readOptions(el)
 
             -- if not explicitly set, mark markdown cells as flow

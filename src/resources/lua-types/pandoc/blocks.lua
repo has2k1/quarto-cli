@@ -316,7 +316,7 @@ An ordered list.
 ---@field listAttributes pandoc.ListAttributes List parameters
 ---@field start integer Alias for `listAttributes.start`
 ---@field style list_style Alias for `listAttributes.style`
----@field delimeter list_delimeter Alias for `listAttributes.delimiter`
+---@field delimiter list_delimeter Alias for `listAttributes.delimiter`
 ---@field t "OrderedList"
 ---@field tag "OrderedList"
 pandoc.OrderedList = {}
@@ -378,7 +378,7 @@ function pandoc.Para:walk(lua_filter) end
 --======================== Plain ========================
 
 --[[
-Plain text, not a paragarph
+Plain text, not a paragraph
 ]]
 ---@class pandoc.Plain : pandoc.Block
 ---@field content pandoc.List Inline content (list of inlines)

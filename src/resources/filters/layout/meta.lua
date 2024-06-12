@@ -23,7 +23,7 @@ function layout_meta_inject_latex_packages()
       local adaptiveTextHighlighting = param('adaptive-text-highlighting', false)
 
       -- If the user specifies 'code-block-border-left: false'
-      -- then we should't give the code blocks this treatment
+      -- then we shouldn't give the code blocks this treatment
       local kCodeBlockBorderLeft = 'code-block-border-left'
       local kCodeBlockBackground = 'code-block-bg'
 

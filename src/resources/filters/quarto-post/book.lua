@@ -45,7 +45,7 @@ function quartoBook()
         -- this should just be some metadata 
         local renderedDoc = pandoc.read(el.text, 'markdown')
 
-        -- render the title block using the metdata and
+        -- render the title block using the metadata and
         -- and the template
         local template = el.attr.attributes['template']
 

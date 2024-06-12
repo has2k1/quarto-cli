@@ -199,7 +199,7 @@ function formatNumberOption(type, order, default)
     return resolve(utf8.char(startIndex + num - 1))
   elseif (string.match(numberStyle, "^roman")) then
     -- permits the user to express `roman` or `roman i` or `roman I` to
-    -- use lower / uppper case roman numerals
+    -- use lower / upper case roman numerals
     local lower = false
     if (string.sub(numberStyle, -#"i") == "i") then
       lower = true

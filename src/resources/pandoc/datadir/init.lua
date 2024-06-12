@@ -27,8 +27,8 @@
 -- Lua implementations having shortened FP numbers (4-byte "float" instead of 8-byte "double") are not supported.
 -- Lua 5.3+ implementations with shortened integers (int32 instead of int64) are OK.
 
--- This module returns a "convertor" function which converts a string from UTF-8 to OS-specific codepage.
--- On Linux/MacOS/etc. this module doesn't modify any Lua functions and returns "empty convertor" (which simply returns its argument).
+-- This module returns a "converter" function which converts a string from UTF-8 to OS-specific codepage.
+-- On Linux/MacOS/etc. this module doesn't modify any Lua functions and returns "empty converter" (which simply returns its argument).
 
 -- Usage example #1 (executing a Lua script):
 --    require"utf8_filenames"
@@ -1484,7 +1484,7 @@ local function resolveLocation(location)
 -- Provides the path to the dependency file
 -- The dependency file can be used to persist dependencies across filter
 -- passes, but will also be inspected after pandoc is 
--- done running to deterine any files that should be copied
+-- done running to determine any files that should be copied
 local function dependenciesFile()
   local dependenciesFile = os.getenv("QUARTO_FILTER_DEPENDENCY_FILE")
   if dependenciesFile == nil then

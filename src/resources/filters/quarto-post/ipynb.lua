@@ -43,7 +43,7 @@ function render_ipynb_fixups()
           clzStr = ' ' .. table.concat(clzTbl, ' ')
         end
 
-        -- process atrributes
+        -- process attributes
         local attrStr = ''
         if imgAttr.attributes then
           local attrTbl = {}

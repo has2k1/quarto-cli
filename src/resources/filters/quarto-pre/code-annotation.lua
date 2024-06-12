@@ -134,7 +134,7 @@ local function resolveCellAnnotes(codeBlockEl, processAnnotation)
         if lineNumbers == nil then
           lineNumbers = pandoc.List({})
         end
-        -- line numbers stored for targetting annotations line needs to take into account possible startFrom attribute
+        -- line numbers stored for targeting annotations line needs to take into account possible startFrom attribute
         lineNumbers:insert(offset - 1 + i)
         annotations[annoteId] = lineNumbers
         outputs:insert(processAnnotation(line, annoteNumber, annotationProvider))

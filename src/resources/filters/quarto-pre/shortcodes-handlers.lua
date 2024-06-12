@@ -116,7 +116,7 @@ local function read_arg(args, n)
   return varName
 end
 
--- Implements reading values from envrionment variables
+-- Implements reading values from environment variables
 function handleEnv(args)
   if #args > 0 then
     -- the args are the var name

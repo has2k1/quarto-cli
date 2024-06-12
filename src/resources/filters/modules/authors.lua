@@ -362,7 +362,7 @@ local function findAffiliation(id, affiliations)
   return nil
 end
 
--- Normalizes an affilation object into the properly
+-- Normalizes an affiliation object into the properly
 -- structured form
 local function processAffilationObj(affiliation)
   local affiliationNormalized = {}
@@ -665,7 +665,7 @@ local function remapAuthorAffiliations(fromId, toId, authors)
   end
 end
 
--- Sets an attribute, initializeing the table if
+-- Sets an attribute, initializing the table if
 -- is not yet defined
 local function setAttribute(author, attribute)
   if not author[kAttributes] then
@@ -922,7 +922,7 @@ local function letter(number)
 end
 
 -- Processes an affiatiation into a normalized
--- affilation
+-- affiliation
 local function processAffiliation(author, affiliation)
   local affiliations = {}
   local pandocType = pandoc.utils.type(affiliation)
@@ -943,13 +943,13 @@ local function processAffiliation(author, affiliation)
             setAffiliation(author, v)
           end
         else
-          -- This is a more complex affilation, process it
+          -- This is a more complex affiliation, process it
           affiliations[#affiliations + 1] = processAffilationObj(v)
         end
       end
     end
   elseif pandocType == 'table' then
-    -- This is a more complex affilation, process it
+    -- This is a more complex affiliation, process it
     affiliations[#affiliations + 1] = processAffilationObj(affiliation)
   end
 
@@ -957,13 +957,13 @@ local function processAffiliation(author, affiliation)
 end
 
 -- Processes an individual author into a normalized author
--- and normalized set of affilations
+-- and normalized set of affiliations
 local function processAuthor(value)
   -- initialize the author
   local author = pandoc.MetaMap({})
   author[kMetadata] = pandoc.MetaMap({})
 
-  -- initialize their affilations
+  -- initialize their affiliations
   local authorAffiliations = {}
   local affiliationUrl = nil
 
@@ -1071,7 +1071,7 @@ local function processAuthorMeta(meta)
   -- the normalized authors
   local authors = {}
 
-  -- the normalized affilations
+  -- the normalized affiliations
   local affiliations = {}
 
   if authorsRaw then
@@ -1088,7 +1088,7 @@ local function processAuthorMeta(meta)
         author[kId] = authorNumber
       end
 
-      -- go through the affilations and add any to the list
+      -- go through the affiliations and add any to the list
       -- assigning an id if needed
       if authorAffils ~= nil then
         for i,v in ipairs(authorAffils) do

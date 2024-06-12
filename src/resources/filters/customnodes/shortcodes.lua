@@ -251,7 +251,7 @@ function shortcodes_filter()
   local code_handler = function(el)
     -- don't process shortcodes in code output from engines
     -- (anything in an engine processed code block was actually
-    --  proccessed by the engine, so should be printed as is)
+    --  processed by the engine, so should be printed as is)
     if el.attr and el.attr.classes:includes("cell-code") then
       return
     end
