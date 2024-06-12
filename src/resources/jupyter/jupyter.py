@@ -70,7 +70,7 @@ class ExecuteHandler(StreamRequestHandler):
          else:
             self.server.record_success()
       except RestartKernel:
-         trace('notebook restart request recived (exiting server)')
+         trace('notebook restart request received (exiting server)')
          self.message("restart")
          self.server.request_exit()
       except Exception as e:
