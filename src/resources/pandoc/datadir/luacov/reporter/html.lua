@@ -90,7 +90,7 @@ do
 end
 ----------------------------------------------------------------
 
---- Encodes the HTML entities in a string. Helpfull to avoid XSS.
+--- Encodes the HTML entities in a string. Helpful to avoid XSS.
 -- @param s (String) String to escape.
 local function escape_html(s)
     return (string.gsub(s, "[}{\">/<'&]", {
