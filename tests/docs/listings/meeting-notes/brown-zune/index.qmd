@@ -6,7 +6,7 @@ categories:
   - Random
 ---
 
-I'm more than a month into my conversion to a Mac, and so far I've adjusted nicely. The largest issue for me was the fact that I didn't know any shortcut keys, so I was using the mouse a lot more than I'm used to. I'm overcoming that, though I desparately miss ctrl+tab to switch between windows of the current application.
+I'm more than a month into my conversion to a Mac, and so far I've adjusted nicely. The largest issue for me was the fact that I didn't know any shortcut keys, so I was using the mouse a lot more than I'm used to. I'm overcoming that, though I desperately miss ctrl+tab to switch between windows of the current application.
 
 There are two applications that I haven't been able to give up in my transition, however.
 

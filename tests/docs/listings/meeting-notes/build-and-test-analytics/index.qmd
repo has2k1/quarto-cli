@@ -8,7 +8,7 @@ categories:
   - Startup Ideas
 ---
 
-One of the things I've been maintaining on the [Quarto](https://www.github.com/quarto-dev/quarto-cli) team is the GitHub actions that build installers, run tests, and so on. A few times over the last year, we've run into problems in our pipeline which didn't appear as explicit failures, but instead showed up as significant changes in the duration of tasks or actions. For example, there was a stretch where Deno bundling was facing challeges, and this initially appeared to us as very slow bundling as a part of building the installer for Quarto.
+One of the things I've been maintaining on the [Quarto](https://www.github.com/quarto-dev/quarto-cli) team is the GitHub actions that build installers, run tests, and so on. A few times over the last year, we've run into problems in our pipeline which didn't appear as explicit failures, but instead showed up as significant changes in the duration of tasks or actions. For example, there was a stretch where Deno bundling was facing challenges, and this initially appeared to us as very slow bundling as a part of building the installer for Quarto.
 
 Of course, since we didn't typically build installers locally, it took a while for me to notice that building an installer had become very slow on the CI machines. This got me thinking about the need to have more systematic analytics about key elements of the CI pipeline. It would be great to be able to see a commit by commit (or PR by PR) graph of the bundle time, making it easy to pinpoint a code change that contributed to a change in behavior (for example, us updating to a new version of Deno).
 
